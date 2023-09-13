@@ -45,6 +45,7 @@ html:not(.light) .ph-moon {
   right: 3.2rem;
   top: 3.2rem;
   line-height: 0;
+  color: var(--text-color);
 }
 body {
   background: var(--bg-color);
@@ -88,4 +89,13 @@ button {
 
 .secondery {
   color: var(--button-secondary);
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.running) .ph-speaker-highk {
+  display: none;
 }
