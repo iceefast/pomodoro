@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/@phosphor-icons/web
     "></script>
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
   </head>
   <body>
     <div id="app">
-      <button id="toogle-mode">
-        <span>Ativar/Desativas Light Mode</span>
+      <button id="toggle-mode">
+        <span class="sr-only">Ativar/Desativas Light Mode</span>
         <i class="ph-bold ph-sun"></i>
         <i class="ph-bold ph-moon"></i>
       </button>
@@ -25,12 +25,25 @@
       </section>
 
       <section id="controls" class="flex">
-        <button class="ph ph-play-circle"></button>
+        <button class="ph ph-play-circle">
+          <span class="sr-only">init time</span>
+        </button>
         <button class="ph ph-pause-circle"></button>
-        <button class="ph ph-timer"></button>
-        <button class="ph ph-stop-circle"></button>
-        <button class="ph ph-speaker-none"></button>
-        <button class="ph ph-speaker-high"></button>
+        <span class="sr-only">pause timer</span>
+        <button class="ph ph-timer secondery">
+          <span class="sr-only">lap time</span>
+        </button>
+        <button class="ph ph-stop-circle secondery">
+          <span class="sr-only">stop time</span>
+        </button>
+
+        <button class="ph ph-speaker-none secondery">
+          <span class="sr-only">sound off</span>
+        </button>
+
+        <button class="ph ph-speaker-high secondery">
+          <span class="sr-only">sound on</span>
+        </button>
       </section>
     </div>
   </body>
